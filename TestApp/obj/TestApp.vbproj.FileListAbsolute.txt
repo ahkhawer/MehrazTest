@@ -1,0 +1,9 @@
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\bin\TestApp.dll
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\bin\TestApp.pdb
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\bin\TestApp.xml
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\TestApp.Resources.resources
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\TestApp.vbproj.GenerateResource.Cache
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\TestApp.dll
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\TestApp.xml
+C:\Users\mehraz\Documents\Visual Studio 2005\Projects\TestApp\TestApp\obj\Debug\TestApp.pdb
