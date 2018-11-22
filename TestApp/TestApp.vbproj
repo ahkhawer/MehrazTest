@@ -134,6 +134,7 @@
   </ProjectExtensions>
   <Target Name="assembleDebug" Condition=" '$(Configuration)' == 'Release' ">
     <Message Text="This custom target will only be executed when configuration is debug" Importance="high"></Message>
+    <Message Text="FileWrites: @(FileWrites)" Importance="high"/>
   </Target>
   <Target Name="AfterBuild">
     <Message Text="FileWrites: @(FileWrites)" Importance="high"/>
