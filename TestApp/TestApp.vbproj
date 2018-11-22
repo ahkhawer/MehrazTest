@@ -108,7 +108,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <!-- <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" /> -->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!--Ahmad <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" /> -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -133,6 +133,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="assembleDebug" Condition=" '$(Configuration)' == 'Release' ">
-    <Message Text="This custom target will only be executed when configuration is debug $(MSBuildBinPath)" Importance="high"></Message>
+    <Message Text="This custom target will only be executed when configuration is debug $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
 </Project>
