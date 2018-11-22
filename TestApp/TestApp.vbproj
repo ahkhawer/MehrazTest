@@ -132,4 +132,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="assembleDebug" Condition=" '$(Configuration)' == 'Debug' ">
+    <Message Text="This custom target will only be executed when configuration is debug" Importance="high"></Message>
+  </Target>
 </Project>
