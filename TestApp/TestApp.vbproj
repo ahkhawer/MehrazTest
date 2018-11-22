@@ -111,12 +111,16 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
+       Other similar extension points exist, see Microsoft.Common.targets. -->
   <Target Name="BeforeBuild">
+    <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
+    <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
   <Target Name="AfterBuild">
+    <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
+    <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
-  -->
+
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
