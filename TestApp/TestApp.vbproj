@@ -112,7 +112,8 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets. -->
-  <Target Name="BeforeBuild">
+  <Target Name="BeforeBuild">ProjectDir
+    <Message Text="ProjectDir: $(ProjectDir)" Importance="high"></Message>
     <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
     <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
