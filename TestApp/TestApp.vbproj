@@ -118,12 +118,14 @@
     <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
     <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
-  <!-- <UsingTask
-      TaskName="TransformXml"
-      AssemblyFile="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v9.0\Web\Microsoft.Web.Publishing.Tasks.dll" /> -->
-
+  <!-- Copying web.config to bin folder -->
   <Target Name="AfterBuild">
     <Message Text="ProjectDir: $(ProjectDir)" Importance="high"></Message>
+    <Message Text="AssemblyName: $(AssemblyName)" Importance="high"></Message>
+    <!-- <TransformXml Source="$(ProjectDir)\$(AssemblyName)\Web.config"
+                  Transform="C:\Code\MyProject\TransformFile.config"
+                  Destination="C:\Code\MyProject\Web.config"
+                  StackTrace="true" /> -->
     <!-- <TransformXml
         Source="Web.config"
         Destination="$(IntermediateOutputPath)Web.config"
