@@ -118,21 +118,21 @@
     <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
     <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
-  <!-- Copying web.config to bin folder Transform="C:\Code\MyProject\TransformFile.config"-->
+  <!-- Copying web.config to bin folder -->
   <Target Name="AfterBuild">
     <Message Text="ProjectDir: $(ProjectDir)" Importance="high"></Message>
     <Message Text="AssemblyName: $(AssemblyName)" Importance="high"></Message>
-    <TransformXml Source="$(ProjectDir)\$(AssemblyName)\Web.config"
+    <!-- <TransformXml Source="$(ProjectDir)\$(AssemblyName)\Web.config"
+                  Transform="C:\Code\MyProject\TransformFile.config"
                   Destination="$(ProjectDir)\$(AssemblyName)\bin\Web.config"
-                  StackTrace="true" />
+                  StackTrace="true" /> -->
     <!-- <TransformXml
         Source="Web.config"
         Destination="$(IntermediateOutputPath)Web.config"
-        Transform="Web.$(Configuration).config" />
-     Overwrites the original Web.config with the transformed configuration file
+        Transform="Web.$(Configuration).config" /> -->
     <Copy
-        SourceFiles="$(IntermediateOutputPath)Web.config"
-        DestinationFolder="$(ProjectDir)" /> -->
+        SourceFiles="$(ProjectDir)\$(AssemblyName)\Web.config"
+        DestinationFolder="$(ProjectDir)\$(AssemblyName)\bin" />
   </Target>
 
   <ProjectExtensions>
