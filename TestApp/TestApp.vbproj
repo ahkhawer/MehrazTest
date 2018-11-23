@@ -130,9 +130,9 @@
         Source="Web.config"
         Destination="$(IntermediateOutputPath)Web.config"
         Transform="Web.$(Configuration).config" /> -->
-    <!-- <Copy
+    <Copy
         SourceFiles="$(ProjectDir)\Web.config"
-        DestinationFolder="$(ProjectDir)\$(AssemblyName)\bin" /> -->
+        DestinationFolder="$(ProjectDir)\$(AssemblyName)\bin" />
   </Target>
 
   <ProjectExtensions>
