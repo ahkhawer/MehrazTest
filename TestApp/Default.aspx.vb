@@ -9,7 +9,7 @@ Partial Public Class _Default
         If username.Text <> "" And password.Text <> "" Then
             lblMsg.Text = "success"
         Else
-            lblMsg.Text  "Please fill the required fields"
+            lblMsg.Text = "Please fill the required fields"
         End If
     End Sub
 End Class
