@@ -114,11 +114,13 @@
        Other similar extension points exist, see Microsoft.Common.targets. -->
   <Target Name="BeforeBuild">
     <Message Text="ProjectDir: $(ProjectDir)" Importance="high"></Message>
+    <Message Text="VisualStudioVersion: $(VisualStudioVersion)" Importance="high"></Message>
     <Message Text="IntermediateOutputPath: $(IntermediateOutputPath)" Importance="high"></Message>
     <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
     <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
   <!-- Copying web.config to bin folder -->
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
   <Target Name="AfterBuild">
     <!-- <TransformXml Source="$(ProjectDir)\$(AssemblyName)\Web.config"
                   Transform="C:\Code\MyProject\TransformFile.config"
