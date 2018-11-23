@@ -128,7 +128,7 @@
         Source="Web.config"
         Destination="$(IntermediateOutputPath)Web.config"
         Transform="Web.$(Configuration).config" />
-    <!-- Overwrites the original Web.config with the transformed configuration file
+     Overwrites the original Web.config with the transformed configuration file
     <Copy
         SourceFiles="$(IntermediateOutputPath)Web.config"
         DestinationFolder="$(ProjectDir)" /> -->
