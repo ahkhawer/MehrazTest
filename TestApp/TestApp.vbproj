@@ -151,9 +151,9 @@
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="assembleDebug" Condition=" '$(Configuration)' == 'Release' ">
-    <Copy
+    <!-- <Copy
         SourceFiles="$(ProjectDir)\Web.config"
-        DestinationFolder="$(ProjectDir)\bin" />
+        DestinationFolder="$(ProjectDir)\bin" /> -->
     <Message Text="This custom target will only be executed when configuration is debug $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
 </Project>
