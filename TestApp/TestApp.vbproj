@@ -118,9 +118,20 @@
     <Message Text="MSBuildBinPath: $(MSBuildBinPath)" Importance="high"></Message>
     <Message Text="MSBuildExtensionsPath: $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
-  <!-- <Target Name="AfterBuild">
-
-  </Target> -->
+  <!-- Copying web.config to bin folder -->
+  <Target Name="AfterBuild">
+    <!-- <TransformXml Source="$(ProjectDir)\$(AssemblyName)\Web.config"
+                  Transform="C:\Code\MyProject\TransformFile.config"
+                  Destination="$(ProjectDir)\$(AssemblyName)\bin\Web.config"
+                  StackTrace="true" /> -->
+    <TransformXml
+        Source="$(ProjectDir)\Web.config"
+        Destination="$(ProjectDir)\bin\Web.config"
+        Transform="$(ProjectDir)\Web.config" />
+    <!-- <Copy
+        SourceFiles="$(ProjectDir)Web.config"
+        DestinationFolder="$(ProjectDir)" /> -->
+  </Target>
 
   <ProjectExtensions>
     <VisualStudio>
@@ -138,9 +149,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="assembleDebug" Condition=" '$(Configuration)' == 'Release' ">
-    <!-- <Copy
-        SourceFiles="$(ProjectDir)\Web.config"
-        DestinationFolder="$(ProjectDir)\bin" /> -->
     <Message Text="This custom target will only be executed when configuration is debug $(MSBuildExtensionsPath)" Importance="high"></Message>
   </Target>
 </Project>
